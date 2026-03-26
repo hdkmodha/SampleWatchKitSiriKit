@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SQLiteData
+import WidgetKit
 
 struct SingleTallyView: View {
     
@@ -33,7 +34,9 @@ struct SingleTallyView: View {
                             do {
                                 try database.write { db in
                                     try Tally.upsert { tally }.execute(db)
+                                    WidgetCenter.shared.reloadAllTimelines()
                                 }
+                                
                             } catch {
                                 print(error.localizedDescription)
                             }
@@ -46,6 +49,7 @@ struct SingleTallyView: View {
                             do {
                                 try database.write { db in
                                     try Tally.upsert { tally }.execute(db)
+                                    WidgetCenter.shared.reloadAllTimelines()
                                 }
                             } catch {
                                 print(error.localizedDescription)

@@ -10,7 +10,7 @@ import SQLiteData
 
 struct ContentView: View {
     
-    @FetchAll(Tally.order(by: \.name)  ) var tallies: [Tally]
+    @FetchAll(Tally.order(by: \.name)) var tallies: [Tally]
     @Dependency(\.defaultDatabase) var database
     @State private var selectedTally: Tally?
     @State private var isPresent: Bool = false

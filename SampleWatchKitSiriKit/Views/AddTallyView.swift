@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SQLiteData
+import WidgetKit
 
 struct AddTallyView: View {
     
@@ -32,6 +33,7 @@ struct AddTallyView: View {
                         print(error.localizedDescription)
                     }
                     tally = newTally
+                    WidgetCenter.shared.reloadAllTimelines()
                     dismiss()
                 } label: {
                     Text("Add")

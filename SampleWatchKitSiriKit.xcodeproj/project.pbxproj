@@ -8,16 +8,80 @@
 
 /* Begin PBXBuildFile section */
 		C602C1B72F73922E0055A54B /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = C602C1B62F73922E0055A54B /* SQLiteData */; };
+		C602C2152F73EE140055A54B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C602C2142F73EE140055A54B /* WidgetKit.framework */; };
+		C602C2172F73EE140055A54B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C602C2162F73EE140055A54B /* SwiftUI.framework */; };
+		C602C2222F73EE160055A54B /* TallyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C602C2122F73EE140055A54B /* TallyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C6E2CB8D2F744636001F9F49 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = C6E2CB8C2F744636001F9F49 /* SQLiteData */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C602C2202F73EE160055A54B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C602C19F2F7387A20055A54B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C602C2112F73EE140055A54B;
+			remoteInfo = TallyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C602C2272F73EE160055A54B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C602C2222F73EE160055A54B /* TallyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C602C1A72F7387A20055A54B /* SampleWatchKitSiriKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWatchKitSiriKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C602C2122F73EE140055A54B /* TallyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TallyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C602C2142F73EE140055A54B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C602C2162F73EE140055A54B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C602C2282F73EE790055A54B /* TallyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TallyWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C602C2232F73EE160055A54B /* Exceptions for "TallyWidget" folder in "TallyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C602C2112F73EE140055A54B /* TallyWidgetExtension */;
+		};
+		C602C22A2F73F29B0055A54B /* Exceptions for "SampleWatchKitSiriKit" folder in "TallyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Helpers/Database.swift,
+				Model/Tally.swift,
+				Views/AddTallyView.swift,
+				Views/ContentView.swift,
+				Views/SingleTallyView.swift,
+			);
+			target = C602C2112F73EE140055A54B /* TallyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C602C1A92F7387A20055A54B /* SampleWatchKitSiriKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C602C22A2F73F29B0055A54B /* Exceptions for "SampleWatchKitSiriKit" folder in "TallyWidgetExtension" target */,
+			);
 			path = SampleWatchKitSiriKit;
+			sourceTree = "<group>";
+		};
+		C602C2182F73EE140055A54B /* TallyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C602C2232F73EE160055A54B /* Exceptions for "TallyWidget" folder in "TallyWidgetExtension" target */,
+			);
+			path = TallyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,13 +95,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C602C20F2F73EE140055A54B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6E2CB8D2F744636001F9F49 /* SQLiteData in Frameworks */,
+				C602C2172F73EE140055A54B /* SwiftUI.framework in Frameworks */,
+				C602C2152F73EE140055A54B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C602C19E2F7387A20055A54B = {
 			isa = PBXGroup;
 			children = (
+				C602C2282F73EE790055A54B /* TallyWidgetExtension.entitlements */,
 				C602C1A92F7387A20055A54B /* SampleWatchKitSiriKit */,
+				C602C2182F73EE140055A54B /* TallyWidget */,
+				C602C2132F73EE140055A54B /* Frameworks */,
 				C602C1A82F7387A20055A54B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,8 +123,18 @@
 			isa = PBXGroup;
 			children = (
 				C602C1A72F7387A20055A54B /* SampleWatchKitSiriKit.app */,
+				C602C2122F73EE140055A54B /* TallyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C602C2132F73EE140055A54B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C602C2142F73EE140055A54B /* WidgetKit.framework */,
+				C602C2162F73EE140055A54B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,10 +147,12 @@
 				C602C1A32F7387A20055A54B /* Sources */,
 				C602C1A42F7387A20055A54B /* Frameworks */,
 				C602C1A52F7387A20055A54B /* Resources */,
+				C602C2272F73EE160055A54B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C602C2212F73EE160055A54B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C602C1A92F7387A20055A54B /* SampleWatchKitSiriKit */,
@@ -76,6 +165,29 @@
 			productReference = C602C1A72F7387A20055A54B /* SampleWatchKitSiriKit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C602C2112F73EE140055A54B /* TallyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C602C2242F73EE160055A54B /* Build configuration list for PBXNativeTarget "TallyWidgetExtension" */;
+			buildPhases = (
+				C602C20E2F73EE140055A54B /* Sources */,
+				C602C20F2F73EE140055A54B /* Frameworks */,
+				C602C2102F73EE140055A54B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C602C2182F73EE140055A54B /* TallyWidget */,
+			);
+			name = TallyWidgetExtension;
+			packageProductDependencies = (
+				C6E2CB8C2F744636001F9F49 /* SQLiteData */,
+			);
+			productName = TallyWidgetExtension;
+			productReference = C602C2122F73EE140055A54B /* TallyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -87,6 +199,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					C602C1A62F7387A20055A54B = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					C602C2112F73EE140055A54B = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -109,12 +224,20 @@
 			projectRoot = "";
 			targets = (
 				C602C1A62F7387A20055A54B /* SampleWatchKitSiriKit */,
+				C602C2112F73EE140055A54B /* TallyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C602C1A52F7387A20055A54B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C602C2102F73EE140055A54B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +254,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C602C20E2F73EE140055A54B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C602C2212F73EE160055A54B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C602C2112F73EE140055A54B /* TallyWidgetExtension */;
+			targetProxy = C602C2202F73EE160055A54B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C602C1B02F7387A30055A54B /* Debug */ = {
@@ -260,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleWatchKitSiriKit/SampleWatchKitSiriKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B47K5ZJ7V9;
@@ -296,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleWatchKitSiriKit/SampleWatchKitSiriKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B47K5ZJ7V9;
@@ -327,6 +467,76 @@
 			};
 			name = Release;
 		};
+		C602C2252F73EE160055A54B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TallyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B47K5ZJ7V9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TallyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TallyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.modha.SampleWatchKitSiriKit.TallyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C602C2262F73EE160055A54B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TallyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B47K5ZJ7V9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TallyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TallyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.modha.SampleWatchKitSiriKit.TallyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +558,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C602C2242F73EE160055A54B /* Build configuration list for PBXNativeTarget "TallyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C602C2252F73EE160055A54B /* Debug */,
+				C602C2262F73EE160055A54B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -363,6 +582,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		C602C1B62F73922E0055A54B /* SQLiteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C602C1B52F73922E0055A54B /* XCRemoteSwiftPackageReference "sqlite-data" */;
+			productName = SQLiteData;
+		};
+		C6E2CB8C2F744636001F9F49 /* SQLiteData */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C602C1B52F73922E0055A54B /* XCRemoteSwiftPackageReference "sqlite-data" */;
 			productName = SQLiteData;

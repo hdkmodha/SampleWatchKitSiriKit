@@ -25,7 +25,11 @@ extension DatabaseWriter where Self == DatabaseQueue {
             #endif
         }
         
-        let path = URL.documentsDirectory.appending(path: "db.sqlite").path()
+        guard let sharedDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.modha.SampleWatchKitSiriKit") else {
+            fatalError("No visible path ahead. We hit the end! 💣")
+        }
+        
+        let path = sharedDirectory.appending(path: "db.sqlite").path()
         print("Database path: \(path)")
         let database = try! SQLiteData.defaultDatabase(path: path, configuration: configuration)
         var migrator = DatabaseMigrator()
